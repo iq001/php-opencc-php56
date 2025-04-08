@@ -10,21 +10,21 @@
 
 中文简繁转换，支持词汇级别的转换、异体字转换和地区习惯用词转换（中国大陆、台湾、香港、日本新字体）。基于 [BYVoid/OpenCC](https://github.com/BYVoid/OpenCC) 数据实现。
 
-[![Build Status](https://github.com/ysp/php-opencc/actions/workflows/test.yml/badge.svg)](https://github.com/ysp/php-opencc/actions/workflows/test.yml)
-[![Latest Stable Version](https://poser.pugx.org/ysp/php-opencc/v/stable)](https://packagist.org/packages/ysp/php-opencc)
-[![Total Downloads](https://poser.pugx.org/ysp/php-opencc/downloads)](https://packagist.org/packages/ysp/php-opencc)
-[![License](https://poser.pugx.org/ysp/php-opencc/license)](https://packagist.org/packages/ysp/php-opencc)
+[![Build Status](https://github.com/iq001/php-opencc-php56/actions/workflows/test.yml/badge.svg)](https://github.com/iq001/php-opencc-php56/actions/workflows/test.yml)
+[![Latest Stable Version](https://poser.pugx.org/guang/php-opencc-php56/v/stable)](https://packagist.org/packages/guang/php-opencc-php56)
+[![Total Downloads](https://poser.pugx.org/guang/php-opencc-php56/downloads)](https://packagist.org/packages/guang/php-opencc-php56)
+[![License](https://poser.pugx.org/guang/php-opencc-php56/license)](https://packagist.org/packages/guang/php-opencc-php56)
 
 ## 安装
 
 ```shell
-composer require ysp/php-opencc -vvv
+composer require guang/php-opencc-php56 -vvv
 ```
 
 ## 使用
 
 ```php
-use Ysp\OpenCC\OpenCC;
+use Guang\OpenCC\OpenCC;
 
 echo OpenCC::convert('服务器', 'SIMPLIFIED_TO_TAIWAN_WITH_PHRASE'); 
 // output: 伺服器
@@ -33,8 +33,8 @@ echo OpenCC::convert('服务器', 'SIMPLIFIED_TO_TAIWAN_WITH_PHRASE');
 ### 使用策略别名
 
 ```php
-use Ysp\OpenCC\OpenCC;
-use Ysp\OpenCC\Strategy;
+use Guang\OpenCC\OpenCC;
+use Guang\OpenCC\Strategy;
 
 // 以下方法等价：
 
