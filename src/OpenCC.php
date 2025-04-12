@@ -59,4 +59,37 @@ class OpenCC
 
         return static::convert($arguments[0], constant(Strategy::class.'::'.$strategy));
     }
+    
+    /**
+     * 添加一个转换规则到用户自定义词典
+     *
+     * @param string $from 源字符串
+     * @param string $to 目标字符串
+     * @return void
+     */
+    public static function addUserRule($from, $to)
+    {
+        UserDictionary::add($from, $to);
+    }
+    
+    /**
+     * 批量添加转换规则到用户自定义词典
+     *
+     * @param array<string, string> $rules 转换规则数组
+     * @return void
+     */
+    public static function addUserRules(array $rules)
+    {
+        UserDictionary::addMany($rules);
+    }
+    
+    /**
+     * 清空用户自定义词典
+     *
+     * @return void
+     */
+    public static function clearUserDictionary()
+    {
+        UserDictionary::clear();
+    }
 }

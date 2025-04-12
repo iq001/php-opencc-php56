@@ -37,6 +37,12 @@ class Dictionary
         }
 
         $dictionaries = [];
+        
+        // 添加用户自定义词典（如果存在）
+        if (!UserDictionary::isEmpty()) {
+            $dictionaries[] = UserDictionary::get();
+        }
+        
         foreach (self::SETS_MAP[$set] as $dictionary) {
             if (is_array($dictionary)) {
                 $group = [];
